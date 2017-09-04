@@ -3,6 +3,10 @@ resource "aws_iam_user" "ohr-sls" {
   name = "ohr-sls"
 }
 
+#resource "aws_iam_access_key" "ohr-sls" {
+#  user = "${aws_iam_user.ohr-sls.name}"
+#}
+
 resource "aws_iam_user_policy" "ohr-sls" {
   name = "ohr-sls-policy"
   user = "${aws_iam_user.ohr-sls.name}"
