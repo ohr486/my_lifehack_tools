@@ -19,7 +19,7 @@ frameworkVersion: "=1.21.0"
 
 provider:
   name: aws
-  runtime: python2.7
+  runtime: python3.6
 
 # you can overwrite defaults here
   stage: dev
@@ -31,7 +31,7 @@ provider:
 #    - Effect: "Allow"
 #      Action:
 #        - "s3:ListBucket"
-#      Resource: { "Fn::Join" : ["", ["arn:aws:s3:::", { "Ref" : "ServerlessDeploymentBucket" } ] ]  }
+##      Resource: { "Fn::Join" : ["", ["arn:aws:s3:::", { "Ref" : "ServerlessDeploymentBucket" } ] ]  }
 #    - Effect: "Allow"
 #      Action:
 #        - "s3:PutObject"
@@ -55,9 +55,12 @@ provider:
 #    - exclude-me.py
 #    - exclude-me-dir/**
 
+package:
+  artifact: tmp/sample/package.zip
+
 functions:
-  hello:
-    handler: handler.hello
+  sample:
+    handler: sample.lambda_handler
 
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
