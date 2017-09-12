@@ -13,3 +13,8 @@ $ pip install requests -t .
 $ zip -r package.zip *
 ```
 
+## how to deploy to heroku
+
+```bash
+$ git subtree push --prefix bot/ heroku master
+```
