@@ -16,5 +16,13 @@ tmp/*/*.egg-info/
 tmp/*/.installed.cfg
 tmp/*/*.egg
 
+__pycache__/
+*.py[cod]
+*$py.class
+
 # Serverless directories
-sls/.serverless
+tmp/*/.serverless
+
+# for editor
+*.swp
+*~
