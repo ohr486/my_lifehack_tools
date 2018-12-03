@@ -18,3 +18,25 @@ $ zip -r package.zip *
 ```bash
 $ git subtree push --prefix bot/ heroku master
 ```
+
+## serverless
+
+### setup
+
+```bash
+$ npm install serverless -g
+$ npm install serverless-python-requirements -g
+$ npm install serverless-domain-manager -g
+```
+
+### create domain
+
+```bash
+$ sls create_domain --stage=develop --profile=my-sls
+```
+
+### deploy lambda
+
+```bash
+$ sls deploy --stage=develop --profile=my-sls
+```
