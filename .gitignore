@@ -27,7 +27,6 @@ tmp/*/.serverless
 .ide
 .idea
 *.impl
-.vscode
 
 # for editor
 *.swp
